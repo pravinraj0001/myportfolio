@@ -16,7 +16,7 @@ SECRET_KEY ='1!#5=8mse+b2(0pe))rihfgd!^q%v0&7k(14ja4(k)vn2z#(#p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://pravin-portfolio.herokuapp.com/',]
 
 CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
@@ -162,8 +162,3 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'portfolio/static/'),
 )
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
